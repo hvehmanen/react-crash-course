@@ -1,6 +1,25 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.counter.value !== this.props.counter.value) {
+      console.log(
+        "value of counter " +
+          this.props.counter.id +
+          " has changed from " +
+          prevProps.counter.value +
+          " to " +
+          this.props.counter.value
+      );
+      //Ajax call to update data
+    }
+  }
+
+  componentWillUnmount() {
+    console.log("counter " + this.props.counter.id + " is removed");
+    //do cleanup
+  }
+
   render() {
     return (
       <div>

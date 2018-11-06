@@ -13,6 +13,11 @@ class App extends Component {
     ]
   };
 
+  componentDidMount() {
+    console.log("App - mounted");
+    //Ajax call to get new data
+  }
+
   handleIncrement = counter => {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
