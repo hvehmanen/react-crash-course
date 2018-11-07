@@ -1,16 +1,23 @@
-import React from "react";
+import React, { Component } from "react";
+import Consumer from "../contexts/countersContext";
 
-const NavBar = ({ totalCounters }) => {
-  return (
-    <nav className="navbar navbar-light bg-light">
-      <span className="navbar-brand">
-        Navbar{" "}
-        <span className="badge badge-pill badge-secondary">
-          {totalCounters}
+class NavBar extends Component {
+  render() {
+    return (
+      <nav className="navbar navbar-light bg-light">
+        <span className="navbar-brand">
+          Navbar{" "}
+          <Consumer>
+            {context => (
+              <span className="badge badge-pill badge-secondary">
+                {context.totalCounters}
+              </span>
+            )}
+          </Consumer>
         </span>
-      </span>
-    </nav>
-  );
-};
+      </nav>
+    );
+  }
+}
 
 export default NavBar;
