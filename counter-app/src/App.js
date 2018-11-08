@@ -6,7 +6,7 @@ import "./App.css";
 
 class App extends Component {
   componentDidMount() {
-    console.log("App - mounted");
+    //console.log("App - mounted");
     //Ajax call to get new data
   }
 
