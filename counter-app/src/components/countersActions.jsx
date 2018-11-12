@@ -4,7 +4,7 @@ import Consumer from "../contexts/countersContext";
 class CountersActions extends Component {
   render() {
     return (
-      <div>
+      <div className="actions">
         <Consumer>
           {context => (
             <React.Fragment>

@@ -5,6 +5,7 @@ import CountersActions from "./countersActions";
 
 class Counters extends Component {
   render() {
+    console.log("counters render");
     return (
       <div>
         <Consumer>
